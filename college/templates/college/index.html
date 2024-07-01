@@ -1,0 +1,200 @@
+{% extends "college/layout.html" %}
+{% load static %}
+
+{% block title %}
+الرئيسية
+{% endblock %}
+
+{% block body %}
+  <main id="home" class="home-mainSection">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm">
+        <div class="home-mainSection-content">
+          <h3> In art, we trust! <h3>
+            <h2 dir="rtl" class="arabic-fonts">تربية فنية جامعة السويس, دليلك نحو الابداع والفن!<h2>
+            </div>
+          </div>
+        </div>
+      </div>
+        <a  class="home-mainLink home-mainSection-buttons-center arabic-fonts" href="#welcome">اعرف اكتر</a>
+      <a class="home-arrow-link" href="#welcome"> <img class="home-mainSection-buttons-center home-arrow" src=" {%static 'college/images/banner-arrow.png' %}" alt=""/> </a>
+      </main>
+
+      <section id="welcome">
+        <div class="container">
+          <div class="row">
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 d-none d-sm-block">
+              <img class="home-greeting-img " src="{%static 'college/images/main.png' %}" alt="A picture"/>
+            </div>
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+        <p class="greetings arabic-fonts-slim"> أهلًا ومرحبًا </p>
+        <p class="home-About-head arabic-fonts"> <span class="home-underabout arabic-fonts">من</span> نحن؟ </p>
+        <p dir="rtl" class="text-right home-about-para arabic-fonts-slim">
+          كلية تربية فنية هي احدى كليات جامعة السويس, كلية رائدة في تعليم الفنون البصرية والحرف الفنية الإبداعية في مصر. مع بيئة داعمة
+          مميزة, واعضاء هيئة تدريس ذوي خبرات عالية, نقوم بتوفير طلابنا تجربة مميزة وفريدة من نوعها في تعلم الفنون, تتيح لهم اكتشاف انفسم وتزودهم بالمهارات والمعلومات اللازمة لحياتهم العملية بعد التخرج.
+        </p>
+        </div>
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12  d-xl-none d-lg-none d-md-none d-sm-block">
+          <img class="home-greeting-img" src="{%static 'college/images/main.png' %}" alt="Event picture"/>
+        </div>
+      </div>
+    </div>
+      </section>
+
+      <section dir="rtl" id="maincontent" class="home-main-content-section">
+        <div class="container">
+          <p class=" home-About-head arabic-fonts text-right"> <span class="home-underabout arabic-fonts ">المقررات</span> الدراسية </p> <br>
+          <p dir="rtl" class="text-right home-page-our-courses">
+            المقررات الدراسية في تربية فنية جامعة السويس مصممة بجودة عالية لإمداد المتعلمين بالمهارات العملية والمعلومات النظرية اللازمة لإعداد فنانين ماهرين ومبدعين.           </p>
+          <div class="row">
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+              <div class="col">
+                <div class="card h-100">
+                  <img src="{% static 'college/images/sculpture.jpeg' %}" class="card-img-top our-courses-imgs" alt="Card image cap">
+                  <div class="card-body">
+                    <h5 class="card-title text-end">النحت</h5>
+                    <p class="card-text text-end">
+                      استكشاف الأبعاد والتعبير عن الإبداع من خلال اللمس والشكل. تُعد مادة النحت في كلية تربية فنية فرصة لاكتساب مهارات فنية عميقة من خلال تجارب تفاعلية. يتمحور التعليم حول فهم المواد وتطبيق التقنيات، مما يمكن الطلاب من تجسيد أفكارهم بأشكال مختلفة من الطين إلى الحجر وغيرها. استكشاف القصة والتراث والابتكار يعزز الفهم الشامل للفن التشكيلي ودوره في المجتمعات المعاصرة.
+                    </p>
+                  </div>
+                  
+                </div>
+              </div>
+            
+              <div class="col">
+                <div class="card h-100">
+                  <img src="{% static 'college/images/design.jpg' %}" class="card-img-top our-courses-imgs" alt="Card image cap">
+                  <div class="card-body">
+                    <h5 class="card-title text-end">التصميم</h5>
+                    <p class="card-text text-end">
+                      اكتساب القدرة على التفكير الإبداعي وتطبيق المفاهيم الأساسية للتصميم. تعتبر مادة مبادئ التصميم في كلية تربية فنية فرصة أساسية لتعلم كيفية تحليل وتنظيم العناصر البصرية بطرق تجمع بين الفن والعلم. يتضمن التعليم في هذه المادة فهم الخطوط والأشكال والألوان والتوازن والتناغم، مما يمكن الطلاب من تطوير رؤية فنية قائمة على أسس قوية. تعزز هذه الدراسة القدرة على التعبير الفني وفهم تأثير التصميم في الحياة اليومية والثقافية.
+                    </p>
+                  </div>
+                  
+                </div>
+              </div>
+            
+              <div class="col">
+                <div class="card h-100">
+                  <img src="{% static 'college/images/ceramic.jpeg' %}" class="card-img-top our-courses-imgs" alt="Card image cap">
+                  <div class="card-body">
+                    <h5 class="card-title text-end">الخزف</h5>
+                    <p class="card-text text-end">
+                      استكشاف الفن التقليدي والإبداع من خلال الطين والتشكيل اليدوي. تعد مادة الخزف في كلية تربية فنية تجربة غنية في التعبير الفني والتقنيات الحرفية. يتعلم الطلاب كيفية استخدام الطين لإنشاء أشكال متنوعة، مما يشمل الأواني والمجسمات والأعمال الفنية الجماعية. يتمحور التعليم حول تعزيز المهارات التقنية والتعبير الفني، ويساعد الطلاب على فهم التقاليد الفنية والابتكار في الفنون التشكيلية. تتيح هذه المادة للطلاب الاستفادة من تجربة يدوية تعزز الابتكار والتفاعل الإبداعي مع المواد الفنية التقليدية.
+                    </p>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+            
+          </div> <br>
+          <a  class="home-mainLink home-mainSection-buttons-center arabic-fonts" href="#">اطلع على كل المقررات</a>
+
+        </div>
+      </section>
+
+      
+      <section id="extra-activities-section" >
+        <div class="container">
+          <p class=" home-About-head arabic-fonts text-right"> <span class="home-underabout arabic-fonts ">منصاتنا</span> التعليمية </p> <br>
+          <p dir="rtl" class="text-right home-page-our-courses">
+            إنطلاقًا من إيماننا ان التعليم عالي الجودة حق للجميع, تربية فنية جامعة السويس تقوم بتقديم العديد من المواد التعليمية المجانية عالية الجودة باللغة العربية. نقوم بتقديم تلك المواد التعليمية بمختلف الطرق والوسائط.
+            </p>
+          <div dir="rtl" class="row">
+          <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-xs-12 home-graphic-design">
+                <img class="main-content-icons" src="{% static 'college/images/course.png' %}"/>
+                <h3>دورات تدريبية</h3>
+                <p dir="rtl" class="home-gd-para text-right">
+                  الدوات التدريبية الخاصة بنا عالية الجودة تركز على تقديم محتوى تقديمي شامل عن مقرر دراسي معين وبشكل مجاني. تحتوي الدورات التعليمية على فيديوهات لمحاضرات تم تصميمها لتزويد المتعلم بالمعلومات النظرية والتطبقية عن المادة المدروسة, بالإضافة إلى مشاريع عملية تحت اشراف اعضاء هيئة التدريس من اجل مساعدة المتعلمين على إكتساب المهارات اللازمة في موضوع المقرر.
+                </p>
+            </div>
+
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-xs-12 home-graphic-design">
+                  <img class="main-content-icons" src="{% static 'college/images/workshop.png' %}"/>
+                  <h3>ورش عمل</h3>
+                  <p dir="rtl" class="home-gd-para">
+                    من خلال منصاتنا التعليمية, نقوم بتقديم ورش عمل, والتي تعتمد على تعريضك لتعلم مهارة جديدة بشكل عملي دون التعمق في التفاصيل النظرية. ورش العمل مناسبة في حالة كان لديك الرغبة في الإطلاع على مهارة ترغب في معرفتها بشكل سريع وعملي.
+                    </p>
+              </div>
+
+           
+
+                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-xs-12 home-graphic-design">
+                      <img class="main-content-icons" src="{% static 'college/images/podcast.png' %}"/>
+                      <h3>Podcast</h3>
+                      <p dir="rtl" class="home-gd-para" >
+                        تربية فنية جامعة السويس تهتم بصناعة المحتوى الثري المتعلق بالفنون لمستمعيها العرب. لذلك نقوم بعمل بودكاست يهتم بكل ما يتعلق بالفنون البصرية والحرف الإبداعية.
+                      </p>
+
+                  </div>
+
+          </div>
+          
+        </div>
+      </section>
+
+      <!-- New Section for Faculty Members -->
+<section id="faculty" class="home-main-content-section">
+  <p class=" home-About-head arabic-fonts text-right"> <span class="home-underabout arabic-fonts ">اعضاء </span> هيئة التدريس </p> <br>
+  <p dir="rtl" class="text-right home-page-our-courses">
+    تعرف على اعضاء هيئة التدريس المبدعين الذين يتميزون بمزيج من سنوات من الخبرة الأكاديمية والخبرات العملية في المعارض الدولية.
+    </p>
+  <div class="container">
+    <div dir="rtl" class="row row-cols-1 row-cols-md-3 g-4">
+      <div class="col">
+        <div class="card h-100">
+          <img src="{% static 'college/images/instructor0.jpg' %}" class="card-img-top" alt="Professor image">
+          <div class="card-body">
+            <h5 class="card-title text-end">أ.د/ اسماء شاهين</h5>
+            <p class="card-text text-end home-teaching-staff-paragraph">
+              <strong>التخصص:</strong> تصميم<br>
+              <strong>نبذة:</strong> أ.د اسماء شاهين, استاذة متخصصة في التصميم وذو خبرة تزيد عن 20 عام في تدريس مادة التصميم. يشمل اهتمامها الأكاديمي مبادئي التصميم والألوان وتاريخ الفن.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100">
+          <img src="{% static 'college/images/instructor0.jpg' %}" class="card-img-top" alt="Professor image">
+          <div class="card-body">
+            <h5 class="card-title text-end home-teaching-staff-paragraph">د. آية حسن</h5>
+            <p class="card-text text-end home-teaching-staff-paragraph">
+              <strong>التخصص:</strong> تصميم جرافيك<br>
+              <strong>نبذة:</strong> د. آية حسن هي أستاذة تصميم جرافيك معروفة بقدرتها على دمج التقنيات الحديثة مع الفنون التقليدية. تركز أبحاثها على التفاعل بين المستخدم والتصميم الرقمي.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100">
+          <img src="{% static 'college/images/instructor0.jpg' %}" class="card-img-top" alt="Professor image">
+          <div class="card-body">
+            <h5 class="card-title text-end home-teaching-staff-paragraph">د. محمود ابو هادية</h5>
+            <p class="card-text text-end home-teaching-staff-paragraph">
+              <strong>التخصص:</strong> خزف<br>
+              <strong>نبذة:</strong> د.محمود ابو هادية هو أستاذ متخصص في الخزف وله العديد من المعارض المحلية والدولية. يهتم بدراسة تاريخ الخزف وتطوير تقنيات جديدة في هذا المجال.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Add more cards as needed -->
+
+    </div> <br>
+
+    <a  class="home-mainLink home-mainSection-buttons-center arabic-fonts" href="#">تعرف على اعضاء هيئة التدريس</a>
+  </div>
+</section>
+
+
+      <section id="Sponsors">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3455.370496331236!2d32.49790267538892!3d29.99751627494726!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14562f1b65602eab%3A0x593edae01e57c240!2sSuez%20University!5e0!3m2!1sen!2seg!4v1718979848884!5m2!1sen!2seg" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </section>
+
+      
+      {% endblock %}
+     

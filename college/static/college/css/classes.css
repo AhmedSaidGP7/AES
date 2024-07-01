@@ -1,0 +1,458 @@
+body, html {
+    height: 100%;
+
+    line-height: 1.2;
+	overflow:visible;
+
+
+}
+
+
+h1,h2,h3,h4,h5,h6,p,a,label,input, li{
+
+  font-family: 'Cairo', sans-serif;
+}
+
+.home-mainSection
+{
+  width: 100%;
+  min-height: 600px;
+  height: auto;
+  padding-bottom: 15px;
+}
+
+.home-mainSection-content
+{
+  text-align: center;
+  vertical-align: middle;
+  line-height: 3;
+  padding-top: 150px;
+  font-family: GothProReg;
+  color: white;
+}
+
+.home-mainSection-content h3
+{
+  margin-bottom: 55px;
+  font-size: 40px;
+  margin-top: 50px;
+  font-weight: bold;
+}
+
+.home-mainSection-content h2
+{
+  font-size: 26px;
+  margin-bottom: 68px;
+}
+
+.home-mainSection-buttons-center
+{
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.home-mainLink
+{
+  text-align: center;
+  font-size: 26px;
+  color: white;
+  padding: 20px;
+  border: 2px #e87892 solid;
+  border-radius: 30px;
+  transition: all 0.4s ease;
+
+}
+
+.home-mainLink:hover
+{
+  text-decoration: none;
+  color: White;
+  background: #e87892;
+  border: 2px #e87892 solid;
+
+  transition: all 0.4s ease;
+
+}
+
+.home-arrow
+{
+  margin-top: 25px;
+  width: 50px;
+}
+
+.home-arrow-link
+{
+  max-width: 75px;
+  display: table;
+  margin: auto;
+}
+.greetings
+{
+   text-align: center;
+   color: #969696;
+   font-weight: normal;
+   font-size: 20px;
+   font-family: 'Gotham Pro';
+   padding-top: 50px;
+}
+.home-About-head
+{
+  text-align: center;
+  color: #424146;
+  font-size: 35px;
+  font-family: 'Gotham Pro';
+  line-height: 1.5;
+}
+
+.home-underabout
+{
+  border-bottom: 4px #ea0e4f  solid;
+  padding-bottom: 7px;
+}
+
+.home-about-para
+{
+  padding-right: 5px;
+  padding-left: 5px;
+  margin-top: 50px;
+  max-width: 450px;
+  text-align: center;
+  display: table;
+  margin-left: auto;
+  font-weight: normal;
+  margin-right: auto;
+  line-height: 2;
+  font-family: 'Gotham Pro';
+  color: #969696;
+
+}
+
+.home-about-mainLink
+{
+  text-align: center;
+  font-size: 15px;
+  color: white;
+  padding: 15px;
+  border: 2px white solid;
+  border-radius: 10px;
+  background: #da0847;
+  transition: all 0.4s ease;
+
+}
+
+.home-about-mainLink:hover
+{
+  color: white;
+  background: #c3083f;
+  transition: all 0.4s ease;
+
+
+}
+
+.home-graphic-design
+{
+
+  text-align: center;
+  min-height: 250px;
+  padding-top: 25px;
+  font-weight: 300;
+  margin-top: 25px;
+}
+
+.home-graphic-design h3
+{
+  font-weight: 600;
+  color: #423f3f;
+}
+
+.home-graphic-design p
+{
+  color: #423f3f;
+  line-height: 2;
+  max-width: 305px;
+  text-align: center;
+  display: table;
+  margin: auto;
+  font-weight: 400;
+  padding-bottom: 25px;
+}
+
+.home-greeting-img
+{
+  padding-top: 50px;
+  width: 500px;
+  max-width: 90%;
+}
+
+.home-main-content-section
+{
+  width: 100%;
+    background:#f8f8f8;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: table;
+    /*margin-top: 50px;*/ 
+    padding: 25px;
+}
+
+.home-main-content-section .fa, .fas
+{
+  color: navajowhite;
+  font-weight: 900;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 75px;
+}
+
+.home-speakers-section
+{
+  padding-top: 20px;
+}
+
+.home-speakers-section h2
+{
+  color: #5c5d5e;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  font-family: century gothic;
+}
+
+.speaker-img
+{
+  max-width: 200px;
+  display: table;
+  margin: auto;
+  margin-bottom: 25px;
+}
+.home-logo
+{
+    max-width: 200px;
+    position: relative;
+    bottom: 0px;
+}
+
+.specialfont
+{
+  font-family: 'Cairo', sans-serif;
+  font-weight: bold;
+}
+
+footer a
+{
+  color: white;
+}
+
+
+footer a:hover
+{
+  color: white;
+}
+
+
+.arabic-fonts
+{
+  font-family: 'Cairo', sans-serif;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.arabic-fonts-slim
+{
+  font-family: 'Cairo', sans-serif;
+  text-decoration: none;
+
+}
+.main-content-icons
+{
+  max-width: 150px;
+  margin-bottom: 10px;
+}
+
+
+.fa-brands
+{
+  font-size: 20px;
+  margin: 5px;
+}
+
+.our-courses-imgs
+{
+  height: 185px;
+}
+
+a, h1, h2, h3, h4, h5, h6, p, span,button
+{
+  font-family: "Cairo", sans-serif;
+}
+
+a{
+  text-decoration: none !important;
+}
+#maincontent .card-text
+{
+  line-height: 2;
+}
+
+.btn{
+  font-family: "Cairo", sans-serif;
+}
+
+.home-page-our-courses
+{
+  line-height: 2 !important;
+  text-align: right !important ;
+}
+
+
+.home-main-content-section .home-About-head
+{
+  text-align: right !important;
+}
+
+#extra-activities-section
+{
+  padding: 25px;
+}
+#extra-activities-section .home-About-head
+{
+  text-align: right !important;
+}
+
+.home-gd-para 
+{
+  text-align: right;
+}
+
+
+.home-teaching-staff-paragraph
+{
+  line-height: 2 !important;
+}
+
+
+#maincontent .home-mainLink
+{
+  color: #424146;
+}
+
+
+#maincontent .home-mainLink:hover
+{
+  color: white;
+}
+
+#extra-activities-section .home-mainLink
+{
+  color: #424146;
+}
+
+
+#extra-activities-section .home-mainLink:hover
+{
+  color: white;
+}
+
+
+#faculty .home-mainLink
+{
+  color: #424146;
+}
+
+#faculty .home-mainLink:hover
+{
+  color: white;
+}
+
+
+/* Contact us */
+#contact_us_section {
+  background: linear-gradient(135deg, #ea667c 0%, #dc3243 100%);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.contact-form {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  max-width: 500px;
+  width: 100%;
+  margin-top: 150px;
+}
+.contact-form h2 {
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.contact-form .form-control {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: white;
+}
+.contact-form .form-control::placeholder {
+  color: white;
+}
+.contact-form .btn {
+  background-color: black;
+  border-color: black;
+}
+.contact-form .btn:hover {
+  background-color: #333;
+  border-color: #333;
+}
+
+
+.my-login-page
+{
+  min-height: 770px;
+  width: 100%;
+  background-image: url(../images/bg.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: table;
+  margin: 0px !important;
+}
+
+.product-wishlist a {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border: 2px solid #992e49;
+  line-height: 55px;
+  border-radius: 50%;
+  text-align: center;
+  color: #992e49;
+}
+
+.product-wishlist a:hover {
+ 
+  color: #d15977;
+}
+
+.product-wishlist .fa-regular
+{
+  font-size: 25px;
+}
+
+.product-box .btn
+{
+  background: #992e49 !important;
+  border: #992e49 ;
+}
+
+.product-detail .btn
+{
+  background: #992e49 !important;
+  border: #992e49 ;
+}

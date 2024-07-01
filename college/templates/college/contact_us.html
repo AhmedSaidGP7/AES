@@ -1,0 +1,37 @@
+{% extends "college/layout.html" %}
+{% load static %}
+
+{% block title %}
+اتصل بنا
+{% endblock %}
+
+{% block body %}
+
+
+
+<section id="contact_us_section">
+<div dir="rtl" class="contact-form">
+  <h2>تواصل معنا</h2>
+  <form method="POST" action="{% url 'college:contact' %}">
+    {% csrf_token %}
+    <div class="mb-3">
+      <label for="name" class="form-label">الأسم</label>
+      <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required>
+    </div>
+    <div class="mb-3">
+      <label for="email" class="form-label">البريد الإلكتروني</label>
+      <input type="email" class="form-control" id="email" name="email" placeholder="Your E-mail" required>
+    </div>
+    <div class="mb-3">
+      <label for="message" class="form-label">الرسالة</label>
+      <textarea class="form-control" id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+    </div>
+    <div class="d-grid">
+      <button type="submit" class="btn btn-primary">إرسال</button>
+    </div>
+  </form>
+</div>
+</section>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3455.370496331236!2d32.49790267538892!3d29.99751627494726!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14562f1b65602eab%3A0x593edae01e57c240!2sSuez%20University!5e0!3m2!1sen!2seg!4v1718979848884!5m2!1sen!2seg" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+{% endblock %}

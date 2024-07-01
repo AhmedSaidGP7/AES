@@ -1,0 +1,182 @@
+{% extends "gallery/layout.html" %}
+{% load static %}
+
+{% block title %}
+عرض عمل فني للبيع
+{% endblock %}
+
+{% block body %}
+  <main id="home" class="home-mainSection">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm">
+        <div class="home-mainSection-content">
+          <h3>قم ببيع اعمالك الفنية لمن يقدروا ثمنها<h3>
+            <h2 dir="rtl">منصتنا تتيح للفنين المبدعين بيع وشراء الأعمال الفنية الأصلية</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      </main>
+
+      <div  class="main-content">
+        <div class="page-content">
+
+          {% if message %}
+                            <div class="col-sm-12 d-flex justify-content-center">
+                                <div class="alert alert-success alert-dismissible fade show mt-4 px-4 mb-0 text-center" role="alert">
+                                 <i class="uil uil-check-circle d-block display-4 mt-2 mb-3 text-success">
+                                 </i>
+                                 <h5 class="text-success">
+                                  تم بنجاح!
+                                 </h5>
+                                 <p>
+                                  تم عرض العمل الفني للبيع بنجاح
+                                 </p>
+                                 <button aria-label="Close" class="btn-close" data-bs-dismiss="alert" type="button">
+                                 </button>
+                                </div>
+                               </div> <br>
+                        {% endif %}
+
+                        {% if errorMessage %}
+                        <div class="col-sm-12 d-flex justify-content-center">
+                            <div class="alert alert-danger alert-dismissible fade show mt-4 px-4 mb-0 text-center" role="alert">
+                             <i class="uil uil-exclamation-octagon d-block display-4 mt-2 mb-3 text-text-danger">
+                             </i>
+                             <h5 class="text-text-danger">
+                             خطأ في الإدخال
+                             </h5>
+                             <p>
+                               المصاب {{personName}} موجود بالفعل في قواعد البيانات 
+                             </p>
+                             <button aria-label="Close" class="btn-close" data-bs-dismiss="alert" type="button">
+                             </button>
+                            </div>
+                           </div> <br>
+                        {% endif %}
+
+         <div dir="rtl" class="container-fluid">
+          <!-- start page title -->
+          <div class="row">
+           <div dir="rtl" class="col-12">
+            <div class="page-title-box d-flex align-items-center justify-content-between">
+             <h4 class="mb-0 text-right">
+              اضف عملك الفني
+             </h4>
+            
+            </div>
+           </div>
+          </div>
+        
+          <div class="row">
+            <div class="col-xl-12">
+             <div class="card">
+              <div class="card-body">
+               <h4 class="card-title">
+                قم بإدخال تفاصيل عملك الفني
+               </h4> <br>
+               <p class="card-title-desc">
+                تشير علامة * بأن الحقل إجباري
+               </p>
+               <form action="{% url 'gallery:sell' %}" enctype="multipart/form-data" method="POST" class="custom-validation" novalidate="">
+                {% csrf_token %} 
+                <div class="mb-3">
+                 <label class="form-label">
+                  اسم العمل الفني*
+                 </label>
+                 <input class="form-control" name="name" placeholder="قم بكتابة اسم العمل الفني" required="" type="text">
+                 
+                </div>
+                <div class="mb-3">
+                 <label class="form-label">
+                  سعر العمل الفني*
+                 </label>
+                 <div>
+                  <input class="form-control" name="price" data-parsley-type="number" placeholder="قم بإدخال سعر العمل الفني" required="" type="text">     
+                 </div>
+                </div>
+               
+                <div class="mb-3">
+                  <label class="form-label">
+                   نوع العمل الفني*
+                  </label>
+                  <input class="form-control" name="art_type" placeholder="نحت, تصوير, عمل خزفي.. الخ" required="" type="text">
+                 </div>
+
+                 <div class="mb-3">
+                  <label class="form-label">
+                     المواد المستعملة*
+                  </label>
+                  <input class="form-control" name="material" placeholder="طين اسواني, جرانيت, جبس, الوان جواش... الخ" required="" type="text">
+                 </div>
+
+                 <div class="mb-3">
+                  <label class="form-label">
+                   ارتفاع العمل الفني*
+                  </label>
+                  <input class="form-control" name="height" data-parsley-type="number" placeholder="ارتفاع العمل الفني" required="" type="text">
+                 </div>
+
+                 <div class="mb-3">
+                  <label class="form-label">
+                   عرض العمل الفني*
+                  </label>
+                  <input class="form-control" name="width" data-parsley-type="number" placeholder="ارتفاع العمل الفني" required="" type="text">
+                 </div>
+
+                
+                 <div class="mb-3">
+                  <label class="form-label">
+                   الأسلوب المستخدم للعمل الفني
+                  </label>
+                  <input class="form-control" name="style" placeholder="كلاسيكي, مجرد, حديث.. الخ"  type="text">
+                 </div>
+
+
+                <div class="mb-3">
+                 <label class="form-label">
+                  وصف العمل الفني*
+                 </label>
+                 <div>
+                  <textarea name="description" class="form-control" required="" rows="5"></textarea>
+                 </div>
+                </div>
+
+                <div class="mb-3">
+                  <label for="formFile" class="form-label">الصورة الرئيسية للعمل الفني</label>
+                  <input name="main_image" required=""  class="form-control" type="file" accept="image/png, image/jpeg" id="formFile">
+                </div>
+
+                <div class="mb-3">
+                  <label for="formFile" class="form-label">صور من جوانب اخرى للعمل الفني </label>
+                  <input multiple name="image" required=""  class="form-control" type="file" accept="image/png, image/jpeg" id="formFile">
+                </div>
+
+
+                <div>
+                 <div>
+                  <button class="btn btn-primary waves-effect waves-light me-1" type="submit">
+                   اعرض العمل
+                  </button>
+                  <button class="btn btn-secondary waves-effect" type="reset">
+                   إلغاء
+                  </button>
+                 </div>
+                </div>
+               </form>
+              </div>
+             </div>
+            </div>
+            <!-- end col -->
+           
+           </div>
+        
+         </div>
+         <!-- container-fluid -->
+        </div>
+       
+       </div>
+      {% endblock %}
+     

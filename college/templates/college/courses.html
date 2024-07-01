@@ -1,0 +1,129 @@
+{% extends "college/layout.html" %}
+{% load static %}
+
+{% block title %}
+الرئيسية
+{% endblock %}
+
+{% block body %}
+  <main id="home" class="home-mainSection">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm">
+        <div class="home-mainSection-content">
+          <h3>تعرف على المقررات الدراسية<h3>
+            <h2 dir="rtl" class="arabic-fonts">مصممة لإمداد المتعلمين بالمهارات والمعلومات اللازمة لإعداد فنانين مبدعين <h2>
+            </div>
+          </div>
+        </div>
+      </div>
+        <a  class="home-mainLink home-mainSection-buttons-center arabic-fonts" href="#maincontent">اعرف اكتر</a>
+      <a class="home-arrow-link" href="#maincontent"> <img class="home-mainSection-buttons-center home-arrow" src=" {%static 'college/images/banner-arrow.png' %}" alt=""/> </a>
+      </main>
+
+ 
+      <section dir="rtl" id="maincontent" class="home-main-content-section">
+        <div class="container">
+          <p class=" home-About-head arabic-fonts text-right"> <span class="home-underabout arabic-fonts ">الصف</span> الأول </p> <br>
+          <div class="row">
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+              <div class="col">
+                <div class="card h-100">
+                  <img src="{% static 'college/images/sculpture.jpeg' %}" class="card-img-top our-courses-imgs" alt="Card image cap">
+                  <div class="card-body">
+                    <h5 class="card-title text-end">النحت</h5>
+                    <p class="card-text text-end">
+                      استكشاف الأبعاد والتعبير عن الإبداع من خلال اللمس والشكل. تُعد مادة النحت في كلية تربية فنية فرصة لاكتساب مهارات فنية عميقة من خلال تجارب تفاعلية. يتمحور التعليم حول فهم المواد وتطبيق التقنيات، مما يمكن الطلاب من تجسيد أفكارهم بأشكال مختلفة من الطين إلى الحجر وغيرها. استكشاف القصة والتراث والابتكار يعزز الفهم الشامل للفن التشكيلي ودوره في المجتمعات المعاصرة.
+                    </p>
+                  </div>
+                  
+                </div>
+              </div>
+            
+              <div class="col">
+                <div class="card h-100">
+                  <img src="{% static 'college/images/design.jpg' %}" class="card-img-top our-courses-imgs" alt="Card image cap">
+                  <div class="card-body">
+                    <h5 class="card-title text-end">التصميم</h5>
+                    <p class="card-text text-end">
+                      اكتساب القدرة على التفكير الإبداعي وتطبيق المفاهيم الأساسية للتصميم. تعتبر مادة مبادئ التصميم في كلية تربية فنية فرصة أساسية لتعلم كيفية تحليل وتنظيم العناصر البصرية بطرق تجمع بين الفن والعلم. يتضمن التعليم في هذه المادة فهم الخطوط والأشكال والألوان والتوازن والتناغم، مما يمكن الطلاب من تطوير رؤية فنية قائمة على أسس قوية. تعزز هذه الدراسة القدرة على التعبير الفني وفهم تأثير التصميم في الحياة اليومية والثقافية.
+                    </p>
+                  </div>
+                  
+                </div>
+              </div>
+        
+                  <!-- Start new course-->
+              <div class="col">
+                <div class="card h-100">
+                  <img src="{% static 'college/images/ceramic.jpeg' %}" class="card-img-top our-courses-imgs" alt="Card image cap">
+                  <div class="card-body">
+                    <h5 class="card-title text-end">الخزف</h5>
+                    <p class="card-text text-end">
+                      استكشاف الفن التقليدي والإبداع من خلال الطين والتشكيل اليدوي. تعد مادة الخزف في كلية تربية فنية تجربة غنية في التعبير الفني والتقنيات الحرفية. يتعلم الطلاب كيفية استخدام الطين لإنشاء أشكال متنوعة، مما يشمل الأواني والمجسمات والأعمال الفنية الجماعية. يتمحور التعليم حول تعزيز المهارات التقنية والتعبير الفني، ويساعد الطلاب على فهم التقاليد الفنية والابتكار في الفنون التشكيلية. تتيح هذه المادة للطلاب الاستفادة من تجربة يدوية تعزز الابتكار والتفاعل الإبداعي مع المواد الفنية التقليدية.
+                    </p>
+                  </div>
+                  
+                </div>
+              </div>
+               <!-- End new course -->
+            </div>
+            
+          </div>          
+
+          <br> <br>
+
+          <p class=" home-About-head arabic-fonts text-right"> <span class="home-underabout arabic-fonts ">الصف</span> الثاني </p> <br>
+          <div class="row">
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+              <div class="col">
+                <div class="card h-100">
+                  <img src="{% static 'college/images/sculpture.jpeg' %}" class="card-img-top our-courses-imgs" alt="Card image cap">
+                  <div class="card-body">
+                    <h5 class="card-title text-end">النحت</h5>
+                    <p class="card-text text-end">
+                      استكشاف الأبعاد والتعبير عن الإبداع من خلال اللمس والشكل. تُعد مادة النحت في كلية تربية فنية فرصة لاكتساب مهارات فنية عميقة من خلال تجارب تفاعلية. يتمحور التعليم حول فهم المواد وتطبيق التقنيات، مما يمكن الطلاب من تجسيد أفكارهم بأشكال مختلفة من الطين إلى الحجر وغيرها. استكشاف القصة والتراث والابتكار يعزز الفهم الشامل للفن التشكيلي ودوره في المجتمعات المعاصرة.
+                    </p>
+                  </div>
+                  
+                </div>
+              </div>
+            
+              <div class="col">
+                <div class="card h-100">
+                  <img src="{% static 'college/images/design.jpg' %}" class="card-img-top our-courses-imgs" alt="Card image cap">
+                  <div class="card-body">
+                    <h5 class="card-title text-end">التصميم</h5>
+                    <p class="card-text text-end">
+                      اكتساب القدرة على التفكير الإبداعي وتطبيق المفاهيم الأساسية للتصميم. تعتبر مادة مبادئ التصميم في كلية تربية فنية فرصة أساسية لتعلم كيفية تحليل وتنظيم العناصر البصرية بطرق تجمع بين الفن والعلم. يتضمن التعليم في هذه المادة فهم الخطوط والأشكال والألوان والتوازن والتناغم، مما يمكن الطلاب من تطوير رؤية فنية قائمة على أسس قوية. تعزز هذه الدراسة القدرة على التعبير الفني وفهم تأثير التصميم في الحياة اليومية والثقافية.
+                    </p>
+                  </div>
+                  
+                </div>
+              </div>
+        
+                  <!-- Start new course-->
+              <div class="col">
+                <div class="card h-100">
+                  <img src="{% static 'college/images/ceramic.jpeg' %}" class="card-img-top our-courses-imgs" alt="Card image cap">
+                  <div class="card-body">
+                    <h5 class="card-title text-end">الخزف</h5>
+                    <p class="card-text text-end">
+                      استكشاف الفن التقليدي والإبداع من خلال الطين والتشكيل اليدوي. تعد مادة الخزف في كلية تربية فنية تجربة غنية في التعبير الفني والتقنيات الحرفية. يتعلم الطلاب كيفية استخدام الطين لإنشاء أشكال متنوعة، مما يشمل الأواني والمجسمات والأعمال الفنية الجماعية. يتمحور التعليم حول تعزيز المهارات التقنية والتعبير الفني، ويساعد الطلاب على فهم التقاليد الفنية والابتكار في الفنون التشكيلية. تتيح هذه المادة للطلاب الاستفادة من تجربة يدوية تعزز الابتكار والتفاعل الإبداعي مع المواد الفنية التقليدية.
+                    </p>
+                  </div>
+                  
+                </div>
+              </div>
+               <!-- End new course -->
+            </div>
+            
+          </div>          
+        </div>
+      </section>
+
+  
+
+      
+      {% endblock %}
+     

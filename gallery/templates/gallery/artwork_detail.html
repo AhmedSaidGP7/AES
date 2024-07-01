@@ -1,0 +1,170 @@
+{% extends "gallery/layout.html" %}
+{% load static %}
+
+{% block title %}
+{{ artwork.name }}
+{% endblock %}
+
+{% block body %}
+  <main id="home" class="home-mainSection">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm">
+        <div class="home-mainSection-content">
+          <h3>قم ببيع اعمالك الفنية لمن يقدروا ثمنها<h3>
+            <h2 dir="rtl">منصتنا تتيح للفنين المبدعين بيع وشراء الأعمال الفنية الأصلية</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      </main>
+
+      <div class="main-content">
+        <div class="page-content">
+         <div class="container-fluid">
+       
+          <div class="row">
+           <div class="col-lg-12">
+            <div class="card">
+             <div class="card-body">
+              <div dir="rtl" class="row">
+               <div class="col-xl-5">
+                <div class="product-detail">
+                 <div class="row">
+                  <div class="col-3">
+                   <div aria-orientation="vertical" class="nav flex-column nav-pills" id="v-pills-tab" role="tablist">
+
+                    <!-- Start vertical images -->
+                    <a class="nav-link active" data-bs-toggle="pill" href="#product-0" id="product-0-tab" role="tab">
+                      <img alt="{{ artwork.name }}" class="img-fluid mx-auto d-block tab-img rounded" src="{{ artwork.main_img.url }}">
+                    </a> 
+                    {% for image in images %}  
+                    <a class="nav-link " data-bs-toggle="pill" href="#product-{{ forloop.counter }}" id="product-{{ forloop.counter }}-tab" role="tab">
+                        <img alt="{{ artwork.name }}" class="img-fluid mx-auto d-block tab-img rounded" src="{{ image.image.url }}">
+                    </a>   
+                    {% endfor %}
+                    <!-- End vertical images -->
+                   </div>
+                  </div>
+                  <div class="col-9">
+                   <div class="tab-content position-relative" id="v-pills-tabContent">
+                    <div class="product-wishlist">
+                     <a href="#">
+                      <i class="fa-regular fa-heart">
+                      </i>
+                     </a>
+                    </div>
+
+                    <!-- Start main product images -->
+                    <div class="tab-pane fade show active" id="product-0" role="tabpanel">
+                      <div class="product-img">
+                        <a href="{{ artwork.main_img.url }}" target="_blank">
+                          <img alt="{{ artwork.name }}" class="img-fluid mx-auto d-block" src="{{ artwork.main_img.url }}">
+                      </a>
+                      </div>
+                  </div>
+                    {% for image in images %}
+                    <div class="tab-pane fade" id="product-{{ forloop.counter }}" role="tabpanel">
+                        <div class="product-img">
+                          <a href="{{ image.image.url }}" target="_blank">
+                            <img alt="{{ artwork.name }}" class="img-fluid mx-auto d-block" src="{{ image.image.url }}">
+                          </a>
+                        </div>
+                    </div>
+                    {% endfor %}
+                    <!-- End main product images -->
+
+                   </div>
+                   <div class="row text-center mt-2">
+                    <div class="col-sm-6">
+                     <div class="d-grid">
+                      <button class="btn btn-primary waves-effect waves-light mt-2 me-1" type="button">
+                       اضف للعربة
+                       <i class="uil uil-shopping-cart-alt me-2">
+                      </i>
+                      </button>
+                     </div>
+                    </div>
+                   
+                   </div>
+                  </div>
+                 </div>
+                </div>
+               </div>
+               <div class="col-xl-7">
+                <div class="mt-4 mt-xl-3 ps-xl-4">
+                 <h5 class="font-size-14">
+                  <a class="text-muted" href="#">
+                    {{ artwork.author }}
+                  </a>
+                 </h5>
+                 <h4 class="font-size-20 mb-3">
+                  {{ artwork.name }}
+                 </h4>
+               
+                 <h5 class="mt-4 pt-2">
+                 
+                  {{ artwork.price }} ج.م
+                
+                 </h5>
+                 <p class="mt-4 text-muted">
+                  {{ artwork.description }}
+                 </p>
+                 <div>
+                  <div class="row">
+                   <div class="col-md-6">
+                    <div class="mt-3">
+                     <h5 class="font-size-14">
+                      المواصفات :
+                     </h5>
+                     <ul class="list-unstyled product-desc-list text-muted">
+                      <li>
+                       <i class="mdi mdi-circle-medium me-1 align-middle">
+                       </i>
+                       {{ artwork.art_type }}
+                      </li>
+
+                      <li>
+                        <i class="mdi mdi-circle-medium me-1 align-middle">
+                        </i>
+                          ارتفاع: {{ artwork.height }} سنتيمتر
+                       </li>
+
+                       <li>
+                        <i class="mdi mdi-circle-medium me-1 align-middle">
+                        </i>
+                          عرض: {{ artwork.width }} سنتيمتر
+                       </li>
+
+                       <li>
+                        <i class="mdi mdi-circle-medium me-1 align-middle">
+                        </i>
+                      مستخدم فيها:  {{ artwork.material }} 
+                       </li>
+                     </ul>
+                    </div>
+                   </div>
+                   
+                  </div>
+                 
+               
+                 </div>
+                </div>
+               </div>
+              </div>
+              <!-- end row -->
+         
+             </div>
+            </div>
+           </div>
+          </div>
+          <!-- end row -->
+         </div>
+         <!-- container-fluid -->
+        </div>
+      
+       </div>
+      
+      {% endblock %}
+     

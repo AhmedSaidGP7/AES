@@ -1,0 +1,233 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            {% block title %}
+            {% endblock %}
+        </title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <link rel="shortcut icon" href="{%static 'college/img/icon.png'%}" />
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" integrity="0wcy8qFgK2KW18OIp7CDk5LA4IXc+dCW2jh5umyKxHgJWDx+o57w1LK/ZVNi73PQ" crossorigin="anonymous">
+        <link rel="preconnect" href="https://fonts.gstatic.com" integrity="o+SdmONPZGMQfeWYDOyRHbCBLFsppgowAJHA03UUCGF5mIUIeuD1EYnqbMqOqxeT" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" integrity="OLBgp1GsljhM2TJ+sbHjaiH9txEUvgdDTAzHv2P24donTt6/529l+9Ua0vFImLlb" crossorigin="anonymous">
+        <!-- Style files -->
+        <link href = "{% static 'college/css/app.min.css'%}" rel="stylesheet">
+         <!-- Fonts -->
+         <link rel="preconnect" href="https://fonts.googleapis.com" integrity="0wcy8qFgK2KW18OIp7CDk5LA4IXc+dCW2jh5umyKxHgJWDx+o57w1LK/ZVNi73PQ" crossorigin="anonymous">
+         <link rel="preconnect" href="https://fonts.gstatic.com" integrity="o+SdmONPZGMQfeWYDOyRHbCBLFsppgowAJHA03UUCGF5mIUIeuD1EYnqbMqOqxeT" crossorigin="anonymous">
+         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" integrity="OLBgp1GsljhM2TJ+sbHjaiH9txEUvgdDTAzHv2P24donTt6/529l+9Ua0vFImLlb" crossorigin="anonymous">
+         <!-- Style files -->
+         <link href = "{% static 'college/css/app.min.css'%}" rel="stylesheet">
+         <link href = "{% static 'college/css/icons.min.css'%}" rel="stylesheet">
+         <link href = "{% static 'college/libs/bootstrap-touchspin/jquery.bootstrap-touchspin.min.css'%}" rel="stylesheet">
+         <link href = "{% static 'college/libs/select2/css/select2.min.css'%}" rel="stylesheet">
+         <link href="{% static 'college/libs/dropzone/min/dropzone.min.css'%}" rel="stylesheet" type="text/css">
+         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" integrity="sha384-OXVF05DQEe311p6ohU11NwlnX08FzMCsyoXzGOaL+83dKAb3qS17yZJxESl8YrJQ" crossorigin="anonymous">
+         <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js" integrity="sha384-d3UHjPdzJkZuk5H3qKYMLRyWLAQBJbby2yr2Q58hXXtAGF8RSNO9jpLDlKKPv5v3" crossorigin="anonymous"></script>
+         <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha384-vtXRMe3mGCbOeY7l30aIg8H9p3GdeSe4IFlP6G8JMa7o7lXvnz3GFKzPxzJdPfGK" crossorigin="anonymous"></script>
+         <link href = "{% static 'college/css/style.css'%}" rel="stylesheet">
+         <script src="{% static 'college/js/scripts.js'%}">
+         </script> 
+        <!-- End Style -->
+         <!-- Css frameworks -->
+        <link rel="stylesheet" type="text/css" href="{% static 'college/vendors/css/animate.css'%}">
+        <link rel="stylesheet" type="text/css" href="{% static 'college/vendors/css/w3.css'%}" />
+        <link rel="stylesheet" type="text/css" href="{% static 'college/vendors/css/normalize.css'%}" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <script src="https://kit.fontawesome.com/0161992a0c.js" crossorigin="anonymous"></script>
+        <!-- End Css frameworks -->
+        <!-- main Style -->
+        <link rel="stylesheet" type="text/css" href="{% static 'college/css/classes.css'%}" />
+        <link rel="stylesheet" type="text/css" href="{% static 'college/css/main.css'%}" />
+        <link href="https://fonts.googleapis.com/css?family=Cairo&display=swap" rel="stylesheet">
+         <!-- Start meta tags -->
+        <meta http-equiv="Expires" content="0">
+        <meta http-equiv="Content-Script-Type" content="text/javascript">
+        <meta http-equiv="Content-Style-Type" content="text/css">
+        <meta name="description" content="">
+        <meta name="abstract" content="">
+        <meta name="keywords" content="">
+        <meta name="Distribution" content="Global">
+        <meta name="author" content="">
+        <meta name="robots" content="index,follow">
+        <meta name="revisit-after" content="1 days">
+        <meta name="web_author" content="">
+        <!-- End meta tags -->
+        {% block head %}
+        {% endblock %}
+    </head>
+
+    <body>
+    <div class="navbar-header">
+     <div class="d-flex">
+      <!-- LOGO -->
+      <div class="navbar-brand-box">
+       <a class="logo logo-dark" href="index.html">
+        <span class="logo-sm">
+         <img alt="" height="22" src="{% static 'college/images/logo.png'%}">
+        </span>
+        <span class="logo-lg">
+         <img alt="" height="20" src="{% static 'college/images/logo.png'%}">
+        </span>
+       </a>
+       <a class="logo logo-light" href="index.html">
+        <span class="logo-sm">
+         <img alt="" height="22" src="{% static 'college/images/logo.png'%}">
+        </span>
+        <span class="logo-lg">
+         <img alt="" height="20" src="{% static 'college/images/logo.png'%}">
+        </span>
+       </a>
+      </div>
+      <button class="btn btn-sm px-3 font-size-16 header-item waves-effect vertical-menu-btn" type="button">
+       <i class="fa fa-fw fa-bars">
+       </i>
+      </button>
+      <!-- App Search-->
+      <form class="app-search d-none d-lg-block">
+       <div class="position-relative">
+        <img alt="" height="120" src="{% static 'college/images/logo.png'%}">
+       </div>
+      </form>
+     </div>
+     <div class="d-flex">
+      <div class="dropdown d-inline-block d-lg-none ms-2">
+       <button aria-expanded="false" aria-haspopup="true" class="btn header-item noti-icon waves-effect" data-bs-toggle="dropdown" id="page-header-search-dropdown" type="button">
+        <i class="uil-search">
+        </i>
+       </button>
+       <div aria-labelledby="page-header-search-dropdown" class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0">
+        <form class="p-3">
+         <div class="m-0">
+          <div class="input-group">
+           <input aria-label="Recipient's username" class="form-control" placeholder="Search ..." type="text">
+           <div class="input-group-append">
+            <button class="btn btn-primary" type="submit">
+             <i class="mdi mdi-magnify">
+             </i>
+            </button>
+           </div>
+          </div>
+         </div>
+        </form>
+       </div>
+      </div>
+   
+      <div class="dropdown d-inline-block">
+       <button aria-expanded="false" aria-haspopup="true" class="btn header-item waves-effect" data-bs-toggle="dropdown" id="page-header-user-dropdown" type="button">
+        <span class="d-none d-xl-inline-block ms-1 fw-medium font-size-15">
+         حسابي
+        </span>
+        <i class="uil-angle-down d-none d-xl-inline-block font-size-15">
+          <i class="uil-cog">
+          </i>
+        </i>
+       </button>
+       <div  class="dropdown-menu dropdown-menu-end">
+        <!-- item-->
+        <a class="dropdown-item" href="#">
+         <i class="uil uil-user-circle font-size-18 align-middle text-muted me-1">
+         </i>
+         <span class="align-middle">
+          ملفي الشخصي 
+         </span>
+        </a>
+        <a class="dropdown-item d-block" href="#">
+         <i class="uil uil-cog font-size-18 align-middle me-1 text-muted">
+         </i>
+         <span class="align-middle">
+          عربة التسوق
+         </span>
+        </a>
+        <a class="dropdown-item" href="#">
+         <i class="uil uil-lock-alt font-size-18 align-middle me-1 text-muted">
+         </i>
+         <span class="align-middle">
+          قائمة المفضلة
+         </span>
+        </a>
+        <a class="dropdown-item" href="#">
+          <i class="uil uil-lock-alt font-size-18 align-middle me-1 text-muted">
+          </i>
+          <span class="align-middle">
+           اعمالي الفنية
+          </span>
+         </a>
+        <a class="dropdown-item" href="#">
+         <i class="uil uil-sign-out-alt font-size-18 align-middle me-1 text-muted">
+         </i>
+         <span class="align-middle">
+          Sign out
+         </span>
+        </a>
+       </div>
+      </div>
+ 
+     </div>
+    </div>
+
+
+          {% block body %}
+          {% endblock %}
+
+          <footer>
+            <div class="container">
+                  <p dir="rtl" class="text-center arabic-fonts">جميع الحقوق محفوظة © لتربية فنية جامعة السويس لعام 2024</p>
+                  <center>
+                  <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                  <a href="https://www.twitter.com/" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                  <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+    
+                  </center>
+            </div>
+          </footer>
+    <!-- JS librarys -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- JAVASCRIPT -->
+    <script src="{% static 'college/libs/metismenu/metisMenu.min.js'%}">
+    </script>
+    <script src="{% static 'college/libs/simplebar/simplebar.min.js'%}">
+    </script>
+    <script src="{% static 'college/libs/node-waves/waves.min.js'%}">
+    </script>
+    <script src="{% static 'college/libs/waypoints/lib/jquery.waypoints.min.js'%}">
+    </script>
+    <script src="{% static 'college/libs/jquery.counterup/jquery.counterup.min.js'%}">
+    </script>
+     <!-- parsleyjs -->
+    <script src="{% static 'college/libs/parsleyjs/parsley.min.js'%}">
+    </script>
+    <script src="{% static 'college/js/pages/form-validation.init.js'%}">
+    </script>
+    <!-- plugins -->
+    <script src="{% static 'college/libs/select2/js/select2.min.js'%}">
+    </script>
+    <script src="{% static 'college/libs/spectrum-colorpicker2/spectrum.min.js'%}">
+    </script>
+    <script src="{% static 'college/libs/bootstrap-datepicker/js/bootstrap-datepicker.min.js'%}">
+    </script>
+    <script src="{% static 'college/libs/bootstrap-touchspin/jquery.bootstrap-touchspin.min.js'%}">
+    </script>
+    <script src="{% static 'college/libs/bootstrap-maxlength/bootstrap-maxlength.min.js'%}">
+    </script>
+    <script src="{% static 'college/libs/@chenfengyuan/datepicker/datepicker.min.js'%}">
+    </script>
+    <script src="{% static 'college/libs/dropzone/min/dropzone.min.js'%} ">
+      </script>
+
+
+    <!-- init js -->
+    <script src="{% static 'college/js/pages/form-advanced.init.js'%}">
+    </script>
+   
+    <!-- App js -->
+    <script src="{% static 'college/js/app.js'%}">
+    </script>
+    <!-- End JS librarys  -->
+    </body>
+
+
+</html>    
