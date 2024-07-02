@@ -31,7 +31,7 @@
         <p class="greetings arabic-fonts-slim"> أهلًا ومرحبًا </p>
         <p class="home-About-head arabic-fonts"> <span class="home-underabout arabic-fonts">من</span> نحن؟ </p>
         <p dir="rtl" class="text-right home-about-para arabic-fonts-slim">
-          كلية تربية فنية هي احدى كليات جامعة السويس, كلية رائدة في تعليم الفنون البصرية والحرف الفنية الإبداعية في مصر. مع بيئة داعمة
+           تربية فنية بجامعة السويس هي احدى اقسام كلية التربية بجامعة السويس, قسم رائد في تعليم الفنون البصرية والحرف الفنية الإبداعية في مصر. مع بيئة داعمة
           مميزة, واعضاء هيئة تدريس ذوي خبرات عالية, نقوم بتوفير طلابنا تجربة مميزة وفريدة من نوعها في تعلم الفنون, تتيح لهم اكتشاف انفسم وتزودهم بالمهارات والمعلومات اللازمة لحياتهم العملية بعد التخرج.
         </p>
         </div>
@@ -90,7 +90,7 @@
             </div>
             
           </div> <br>
-          <a  class="home-mainLink home-mainSection-buttons-center arabic-fonts" href="#">اطلع على كل المقررات</a>
+          <a  class="home-mainLink home-mainSection-buttons-center arabic-fonts" href="{% url 'college:courses' %}">اطلع على كل المقررات</a>
 
         </div>
       </section>
@@ -145,7 +145,7 @@
     <div dir="rtl" class="row row-cols-1 row-cols-md-3 g-4">
       <div class="col">
         <div class="card h-100">
-          <img src="{% static 'college/images/instructor0.jpg' %}" class="card-img-top" alt="Professor image">
+          <img src="{% static 'college/images/instructor0.jpg' %}" class="img-fluid mx-auto d-block" alt="Professor image">
           <div class="card-body">
             <h5 class="card-title text-end">أ.د/ اسماء شاهين</h5>
             <p class="card-text text-end home-teaching-staff-paragraph">
@@ -158,12 +158,12 @@
 
       <div class="col">
         <div class="card h-100">
-          <img src="{% static 'college/images/instructor0.jpg' %}" class="card-img-top" alt="Professor image">
+          <img src="{% static 'college/images/dr-shrief.jpg' %}" class="img-fluid mx-auto d-block" alt="Professor image">
           <div class="card-body">
-            <h5 class="card-title text-end home-teaching-staff-paragraph">د. آية حسن</h5>
+            <h5 class="card-title text-end home-teaching-staff-paragraph">د. شريف خضر</h5>
             <p class="card-text text-end home-teaching-staff-paragraph">
-              <strong>التخصص:</strong> تصميم جرافيك<br>
-              <strong>نبذة:</strong> د. آية حسن هي أستاذة تصميم جرافيك معروفة بقدرتها على دمج التقنيات الحديثة مع الفنون التقليدية. تركز أبحاثها على التفاعل بين المستخدم والتصميم الرقمي.
+              <strong>التخصص:</strong> نحت <br>
+              <strong>نبذة:</strong> أستاذ متخصص في مجال النحت والنجارة. يتمتع بخبرة واسعة في تدريس تقنيات النحت التقليدية والحديثة، ويعتبر من الرواد في تطبيق تقنيات النجارة المتقدمة في المشاريع الفنية.  يعمل الدكتور شريف على تدريب الجيل الجديد من الفنانين والمبدعين، ويشرف على العديد من المشاريع البحثية التي تهدف إلى تطوير أساليب جديدة في النحت والنجارة.
             </p>
           </div>
         </div>
@@ -171,22 +171,23 @@
 
       <div class="col">
         <div class="card h-100">
-          <img src="{% static 'college/images/instructor0.jpg' %}" class="card-img-top" alt="Professor image">
+          <img src="{% static 'college/images/dr-mohamed.jpeg' %}" class="img-fluid mx-auto d-block" alt="Professor image">
           <div class="card-body">
-            <h5 class="card-title text-end home-teaching-staff-paragraph">د. محمود ابو هادية</h5>
+            <h5 class="card-title text-end home-teaching-staff-paragraph">د. محمد حسن</h5>
             <p class="card-text text-end home-teaching-staff-paragraph">
-              <strong>التخصص:</strong> خزف<br>
-              <strong>نبذة:</strong> د.محمود ابو هادية هو أستاذ متخصص في الخزف وله العديد من المعارض المحلية والدولية. يهتم بدراسة تاريخ الخزف وتطوير تقنيات جديدة في هذا المجال.
+              <strong>التخصص:</strong> تصوير<br>
+              <strong>نبذة:</strong>  أستاذ في مادة التصوير والرسم. يمتاز بخبرة واسعة في تدريس مبادئ وتقنيات الرسم والتصوير، مع التركيز على تطوير مهارات الطلاب في التعبير الفني والتقني. شارك في العديد من المعارض الدولية والمحلية، حيث قدم أعماله الفنية التي تتميز بالابتكار والإبداع. بالإضافة إلى عمله الأكاديمي، يمتلك شركته Ebdaa Outdoor, شركة رائدة في تصميم الاعمال الهندسية والفنية والتي قدمت العديد من الحلول الإبداعية لكبرى الشركات في الوطن العربي.
             </p>
           </div>
         </div>
       </div>
+      
 
       <!-- Add more cards as needed -->
 
     </div> <br>
 
-    <a  class="home-mainLink home-mainSection-buttons-center arabic-fonts" href="#">تعرف على اعضاء هيئة التدريس</a>
+    <a  class="home-mainLink home-mainSection-buttons-center arabic-fonts" href="{% url 'college:staff' %}">تعرف على اعضاء هيئة التدريس</a>
   </div>
 </section>
 

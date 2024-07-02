@@ -1,0 +1,187 @@
+{% extends "gallery/layout.html" %}
+{% load static %}
+
+{% block title %}
+عربة التسوق
+{% endblock %}
+
+{% block body %}
+
+<main id="home" class="home-mainSection">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm">
+                <div class="home-mainSection-content">
+                    <h3 dir="rtl">اوشكت على الحصول على العمل الفني!<h3>
+                    <h2 dir="rtl">لقد اوشكت على الإنتهاء! تابع عملية الشراء للحصول على عملك الفني المفضل</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+
+
+<div class="page-content">
+    <div class="container-fluid">
+        {% if messages %}
+        <div dir="rtl" class="row justify-content-center">
+            <div class="col-lg-3">  <!-- Adjust the column size as needed -->
+                {% for message in messages %}
+                    <div class="alert alert-primary alert-dismissible fade show mt-5" role="alert">
+                        {{ message }}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    {% endif %}
+     <div class="row mb-3">
+      <div class="col-xl-8">
+
+
+{% for item in cart_items %}        
+    <!-- Start product -->
+       <div class="card border shadow-none mb-5">
+        <div dir="rtl" class="card-body">
+         <div class="d-flex align-items-start border-bottom pb-3">
+          <div class="flex-shrink-0">
+           <img alt=" {{ item.artwork.name}}" class="avatar-lg" src="{{ item.artwork.main_img.url }}">
+          </div>
+          <div class="flex-grow-1 align-self-center overflow-hidden  me-4">
+           <div class="mr-3">
+            <h5 class="text-truncate font-size-16">
+             <a class="text-dark" href="{% url 'gallery:artwork_detail' item.artwork.id %}">
+            {{ item.artwork.name}}
+             </a>
+            </h5>
+            <p class="mb-1">
+             من الفنان :
+             <span class="fw-medium">
+                {{ item.artwork.author.first_name}} {{ item.artwork.author.last_name}}
+             </span>
+            </p>
+            <p>
+             نوع العمل :
+             <span class="fw-medium">
+                {{ item.artwork.art_type }}
+             </span>
+            </p>
+           </div>
+          </div>
+          <div class="ms-2">
+           <ul class="list-inline mb-0 font-size-16">
+            <li class="list-inline-item">
+                <form method="post" action="{% url 'gallery:remove_from_cart' item.artwork.id %}">
+                {% csrf_token %}
+                <button type="submit" class="btn btn-link text-muted px-2">
+                    <i class="uil uil-trash-alt"></i>
+                </button>
+            </form>
+            </li>
+           
+           </ul>
+          </div>
+         </div>
+         <div>
+          <div dir="rtl" class="row">
+           <div class="col-md-4">
+            <div class="mt-3">
+             <p class="text-muted mb-2">
+              السعر
+             </p>
+             <h5 class="font-size-16">
+              {{item.artwork.price}} ج.م
+             </h5>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <!-- End product -->
+        {%endfor%}
+
+       <div class="row mt-4">
+        <div class="col-sm-6">
+         <a class="btn btn-link text-muted" href="{% url 'gallery:index' %}">
+          <i class="uil uil-arrow-left me-1">
+          </i>
+          تابع عملية التسوق
+         </a>
+        </div>
+        <!-- end col -->
+        <div class="col-sm-6">
+         <div class="text-sm-end mt-2 mt-sm-0">
+          <a class="btn btn-success" href="ecommerce-checkout.html">
+           <i class="uil uil-shopping-cart-alt me-1">
+           </i>
+           ادفع الآن
+          </a>
+         </div>
+        </div>
+        <!-- end col -->
+       </div>
+       <!-- end row-->
+      </div>
+      <div class="col-xl-4">
+       <div class="mt-5 mt-lg-3">
+        <div class="card border shadow-none">
+         <div class="card-header bg-transparent border-bottom py-3 px-4">
+          <h5 dir="rtl" class="font-size-16 mb-0">
+           ملخص الطلب
+         
+          </h5>
+         </div>
+         <div dir="rtl" class="card-body p-4">
+          <div class="table-responsive">
+           <table class="table mb-0">
+            <tbody>
+             <tr>
+              <td>
+               اجمالي الاعمال الفنية :
+              </td>
+              <td class="text-end">
+                {{ total_price }} ج.م
+              </td>
+             </tr>
+             <tr>
+              <td>
+               رسوم الشحن :
+              </td>
+              <td class="text-end">
+               50 ج.م
+              </td>
+             </tr>
+             <tr>
+              <td>
+                ضريبة ق.م : 
+              </td>
+              <td class="text-end">
+                {{vat|floatformat:2  }}
+              </td>
+             </tr>
+             <tr class="bg-light">
+              <th>
+               إجمالي المدفوع :
+              </th>
+              <td class="text-end">
+               <span class="fw-bold">
+                {{total_order | floatformat:2 }}
+               </span>
+              </td>
+             </tr>
+            </tbody>
+           </table>
+          </div>
+          <!-- end table-responsive -->
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <!-- end row -->
+    </div>
+    <!-- container-fluid -->
+   </div>
+{% endblock %}

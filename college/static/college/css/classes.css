@@ -8,7 +8,7 @@ body, html {
 }
 
 
-h1,h2,h3,h4,h5,h6,p,a,label,input, li{
+h1,h2,h3,h4,h5,h6,p,a,label,input, li, tr, td, div{
 
   font-family: 'Cairo', sans-serif;
 }
@@ -456,3 +456,4 @@ a{
   background: #992e49 !important;
   border: #992e49 ;
 }
+

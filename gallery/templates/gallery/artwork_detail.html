@@ -20,10 +20,26 @@
       
       </main>
 
+     
+  
+    
       <div class="main-content">
         <div class="page-content">
          <div class="container-fluid">
-       
+
+          {% if messages %}
+              <div dir="rtl" class="row justify-content-center">
+                  <div class="col-lg-3">  <!-- Adjust the column size as needed -->
+                      {% for message in messages %}
+                          <div class="alert alert-primary alert-dismissible fade show mt-5" role="alert">
+                              {{ message }}
+                              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                          </div>
+                      {% endfor %}
+                  </div>
+              </div>
+          {% endif %}
+
           <div class="row">
            <div class="col-lg-12">
             <div class="card">
@@ -49,12 +65,7 @@
                   </div>
                   <div class="col-9">
                    <div class="tab-content position-relative" id="v-pills-tabContent">
-                    <div class="product-wishlist">
-                     <a href="#">
-                      <i class="fa-regular fa-heart">
-                      </i>
-                     </a>
-                    </div>
+                    
 
                     <!-- Start main product images -->
                     <div class="tab-pane fade show active" id="product-0" role="tabpanel">
@@ -78,16 +89,18 @@
                    </div>
                    <div class="row text-center mt-2">
                     <div class="col-sm-6">
-                     <div class="d-grid">
-                      <button class="btn btn-primary waves-effect waves-light mt-2 me-1" type="button">
-                       اضف للعربة
-                       <i class="uil uil-shopping-cart-alt me-2">
-                      </i>
-                      </button>
-                     </div>
+                        <div class="d-grid">
+                            <form method="post" action="{% url 'gallery:add_to_cart' artwork.id %}">
+                                {% csrf_token %}
+                                <button class="btn btn-primary waves-effect waves-light mt-2 me-1" type="submit">
+                                    اضف للعربة
+                                    <i class="uil uil-shopping-cart-alt me-2"></i>
+                                </button>
+                            </form>
+                        </div>
                     </div>
-                   
-                   </div>
+                </div>
+                
                   </div>
                  </div>
                 </div>
@@ -96,7 +109,7 @@
                 <div class="mt-4 mt-xl-3 ps-xl-4">
                  <h5 class="font-size-14">
                   <a class="text-muted" href="#">
-                    {{ artwork.author }}
+                    {{ artwork.author.first_name }} {{ artwork.author.last_name }}
                   </a>
                  </h5>
                  <h4 class="font-size-20 mb-3">

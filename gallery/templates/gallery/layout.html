@@ -92,7 +92,7 @@
        </div>
       </form>
      </div>
-     <div class="d-flex">
+     <div dir="rtl" class="d-flex">
       <div class="dropdown d-inline-block d-lg-none ms-2">
        <button aria-expanded="false" aria-haspopup="true" class="btn header-item noti-icon waves-effect" data-bs-toggle="dropdown" id="page-header-search-dropdown" type="button">
         <i class="uil-search">
@@ -115,56 +115,103 @@
        </div>
       </div>
    
+    
       <div class="dropdown d-inline-block">
        <button aria-expanded="false" aria-haspopup="true" class="btn header-item waves-effect" data-bs-toggle="dropdown" id="page-header-user-dropdown" type="button">
-        <span class="d-none d-xl-inline-block ms-1 fw-medium font-size-15">
-         حسابي
-        </span>
         <i class="uil-angle-down d-none d-xl-inline-block font-size-15">
           <i class="uil-cog">
           </i>
         </i>
+        <span class="d-none d-xl-inline-block ms-1 fw-medium font-size-15">
+         حسابي
+        </span>
        </button>
        <div  class="dropdown-menu dropdown-menu-end">
-        <!-- item-->
-        <a class="dropdown-item" href="#">
-         <i class="uil uil-user-circle font-size-18 align-middle text-muted me-1">
+        {% if not user.is_authenticated%}
+        <a dir="rtl" class="dropdown-item" href="{% url 'users:login'%}">
+        
+          <span class="align-right">
+           تسجيل دخول
+          </span>
+          <i class="fa-solid fa-user font-size-18 align-right text-muted me-1">
          </i>
-         <span class="align-middle">
+         </a>
+         {% endif %}
+        {% if user.is_authenticated%}
+        <!-- item-->
+        <a dir="rtl" class="dropdown-item" href="#">
+        
+         <span class="align-right">
           ملفي الشخصي 
          </span>
+         <i class="fa-solid fa-user font-size-18 align-right text-muted me-1">
+        </i>
         </a>
-        <a class="dropdown-item d-block" href="#">
-         <i class="uil uil-cog font-size-18 align-middle me-1 text-muted">
-         </i>
-         <span class="align-middle">
+        <a class="dropdown-item d-block" href="{% url 'gallery:cart' %}">
+         <span class="align-right text-right">
           عربة التسوق
          </span>
+         <i class="fa-solid fa-cart-shopping font-size-18 align-right me-1 text-muted">
+        </i>
         </a>
         <a class="dropdown-item" href="#">
-         <i class="uil uil-lock-alt font-size-18 align-middle me-1 text-muted">
-         </i>
-         <span class="align-middle">
-          قائمة المفضلة
-         </span>
-        </a>
-        <a class="dropdown-item" href="#">
-          <i class="uil uil-lock-alt font-size-18 align-middle me-1 text-muted">
-          </i>
-          <span class="align-middle">
+          <span class="align-right">
            اعمالي الفنية
           </span>
+          <i class="fa-solid fa-palette font-size-18 align-right me-1 text-muted">
+          </i>
          </a>
-        <a class="dropdown-item" href="#">
-         <i class="uil uil-sign-out-alt font-size-18 align-middle me-1 text-muted">
-         </i>
+        <a class="dropdown-item" href="{% url 'users:signout' %}">
          <span class="align-middle">
-          Sign out
+          تسجيل خروج
          </span>
+         <i class="uil uil-sign-out-alt font-size-18 align-middle me-1 text-muted">
+        </i>
         </a>
+        {% endif %}
        </div>
       </div>
- 
+     
+      <div class="dropdown d-none d-lg-inline-block ms-1">
+        <a href="{% url 'gallery:index' %}">
+        <button class="btn header-item noti-icon waves-effect"  type="button">
+          
+           الرئيسية
+           
+        </button>
+      </a>
+       </div>
+
+      
+      <div class="dropdown d-none d-lg-inline-block ms-1">
+        <a href="{% url 'gallery:sell' %}">
+        <button class="btn header-item noti-icon waves-effect"  type="button">
+          
+             عرض عمل فني للبيع
+           
+        </button>
+      </a>
+       </div>
+
+       <div class="dropdown d-none d-lg-inline-block ms-1">
+        <a href="{% url 'college:index' %}">
+        <button class="btn header-item noti-icon waves-effect"  type="button">
+          
+             تربية فنية جامعة السويس
+        </button>
+      </a>
+       </div>
+
+       <div class="dropdown d-none d-lg-inline-block ms-1">
+        <a href="{% url 'college:contact' %}">
+        <button class="btn header-item noti-icon waves-effect"  type="button">
+          
+            تواصل معنا
+        </button>
+      </a>
+       </div>
+
+
      </div>
     </div>
 
